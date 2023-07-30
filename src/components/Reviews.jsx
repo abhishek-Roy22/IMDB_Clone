@@ -38,7 +38,7 @@ const Reviews = () => {
             </h2>
             <p className="font-thin pb-5">
               Written by {result.author} on{' '}
-              {format(new Date(result.created_at), 'do MMMM Y')}
+              {format(new Date(parseInt(result.created_at)), 'do MMMM Y')}
             </p>
             <p>{result.content}</p>
           </div>

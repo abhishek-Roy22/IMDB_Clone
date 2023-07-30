@@ -16,7 +16,7 @@ const MovieCard = ({ movie }) => {
         </p>
         <p className="font-sans text-gray-500">
           {format(
-            new Date(movie.release_date || movie.first_air_date),
+            new Date(parseInt(movie.release_date || movie.first_air_date)),
             'do MMMM Y'
           )}
         </p>
