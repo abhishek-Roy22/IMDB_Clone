@@ -22,16 +22,16 @@ const Popular = () => {
   if (isError) return `An error has occurred: ${error.message}`;
 
   return (
-    <div className="container m-3">
+    <div className="mt-3 mb-3 p-4">
       <div className="flex flex-col md:flex-row items-center gap-3">
-        <h3 className="text-2xl font-serif font-semibold text-black mt-3 mb-3">
+        <h3 className="text-md sm:text-2xl font-serif font-semibold text-black mt-3 mb-3">
           {query.toLocaleUpperCase()} Tv Series
         </h3>
-        <div className="flex items-center justify-center border-2 overflow-hidden border-black rounded-2xl gap-4">
+        <div className="sm:flex hidden justify-center border-2 overflow-hidden border-black rounded-2xl gap-4">
           <button
             className={`${
               query === 'airing_today' ? 'bg-[#032541] text-white' : ''
-            } border-0 outline-none h-full py-1 px-3 ease-in duration-500`}
+            } border-0 outline-none h-full sm:py-1 sm:px-3 ease-in duration-500 w-max text-sm sm:text-md`}
             onClick={() => setQuery('airing_today')}
             type="button"
           >
@@ -40,7 +40,7 @@ const Popular = () => {
           <button
             className={`${
               query === 'on_the_air' ? 'bg-[#032541] text-white' : ''
-            } border-0 outline-none h-full py-1 px-3 ease-in duration-500`}
+            } border-0 outline-none h-full sm:py-1 sm:px-3 ease-in duration-500 w-max text-sm sm:text-md`}
             onClick={() => setQuery('on_the_air')}
             type="button"
           >
@@ -49,7 +49,7 @@ const Popular = () => {
           <button
             className={`${
               query === 'popular' ? 'bg-[#032541] text-white' : ''
-            } border-0 outline-none h-full py-1 px-3 ease-in duration-500`}
+            } border-0 outline-none h-full sm:py-1 sm:px-3 ease-in duration-500 w-max text-sm sm:text-md`}
             onClick={() => setQuery('popular')}
             type="button"
           >
@@ -58,7 +58,7 @@ const Popular = () => {
           <button
             className={`${
               query === 'top_rated' ? 'bg-[#032541] text-white' : ''
-            } border-0 outline-none h-full py-1 px-3 ease-in duration-500`}
+            } border-0 outline-none h-full sm:py-1 sm:px-3 ease-in duration-500 w-max text-sm sm:text-md`}
             onClick={() => setQuery('top_rated')}
             type="button"
           >

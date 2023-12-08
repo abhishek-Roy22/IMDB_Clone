@@ -22,16 +22,16 @@ const Trending = () => {
   if (isError) return `An error has occurred: ${error.message}`;
 
   return (
-    <div className="container m-3">
+    <div className="mt-3 mb-3 p-4">
       <div className="flex items-center gap-3">
-        <h3 className="text-2xl font-serif font-semibold text-black mt-3 mb-3">
+        <h3 className="text-md sm:text-2xl text-center font-serif font-semibold text-black mt-3 mb-3">
           Trending
         </h3>
-        <div className="flex items-center justify-center border-2 overflow-hidden border-black rounded-2xl gap-4">
+        <div className="sm:flex hidden items-center justify-center border-2 overflow-hidden border-black rounded-2xl gap-4">
           <button
             className={`${
               query === 'day' ? 'bg-[#032541] text-white' : ''
-            } border-0 outline-none h-full py-1 px-3 ease-in duration-500`}
+            } border-0 outline-none h-full sm:py-1 sm:px-3 ease-in duration-500 w-max text-sm sm:text-md`}
             onClick={() => setQuery('day')}
             type="button"
           >
@@ -40,7 +40,7 @@ const Trending = () => {
           <button
             className={`${
               query === 'week' ? 'bg-[#032541] text-white' : ''
-            } border-0 outline-none h-full py-1 px-3 ease-in duration-500`}
+            } border-0 outline-none h-full sm:py-1 sm:px-3 ease-in duration-500 w-max text-sm sm:text-md`}
             onClick={() => setQuery('week')}
             type="button"
           >

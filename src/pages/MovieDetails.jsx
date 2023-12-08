@@ -24,19 +24,19 @@ const MovieDetails = () => {
   return (
     <>
       <div
-        className="w-full mx-auto h-[500px] flex items-center justify-center p-5 font-serif bg-no-repeat bg-cover bg-right"
+        className="w-full mx-auto h-[300px] sm:h-[500px] flex items-center justify-center p-5 font-serif bg-no-repeat bg-cover object-cover"
         style={{
           backgroundImage: `url(${backgroundImage})`,
         }}
       >
-        <div className="flex flex-col md:flex-row gap-5 w-4/5 ">
-          <img src={fullPath} alt="Movie_poster" width={300} height={350} />
+        <div className="hidden sm:flex flex-col md:flex-row gap-5 w-4/5">
+          <img src={fullPath} alt="Movie_poster" width={300} height={350} className='w-[300] min-h-[200px] sm:h-[350px]'/>
           <div className="flex flex-col items-start gap-10">
-            <h1 className="text-white font-bold font-mono text-3xl">
+            <h1 className="text-white font-bold font-mono text-sm sm:text-3xl">
               {data.original_title}
             </h1>
             <div className="flex gap-2">
-              <span className=" text-gray-400 font-semibold">
+              <span className="text-gray-400 font-semibold">
                 {data.release_date}.
               </span>
               {data?.genres?.map((genre) => (
@@ -48,7 +48,7 @@ const MovieDetails = () => {
                 </span>
               ))}
             </div>
-            <span className=" text-white text-2xl font-normal">
+            <span className="block text-white text-2xl font-normal">
               {data.tagline}
             </span>
             <div className="flex flex-col">

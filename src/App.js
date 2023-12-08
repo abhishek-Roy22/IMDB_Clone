@@ -8,7 +8,7 @@ import SearchMovies from './pages/SearchMovies';
 function App() {
   return (
     <BrowserRouter>
-      <div className="container bg-slate-300">
+      <div className="max-w-full mx-auto bg-slate-300">
         <Navbar />
         <Routes>
           <Route path="/" exact element={<DiscoverMovies />} />

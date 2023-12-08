@@ -5,7 +5,7 @@ import Trending from '../components/Trending';
 
 const DiscoverMovies = () => {
   return (
-    <div className="flex flex-col max-w-7xl mx-auto">
+    <div className="flex flex-col w-full">
       <div className="bg-hero-section bg-no-repeat bg-cover bg-center h-96">
         <Hero />
       </div>

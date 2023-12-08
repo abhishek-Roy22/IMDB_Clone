@@ -40,7 +40,7 @@ const Reviews = () => {
               Written by {result.author} on{' '}
               {format(new Date(parseInt(result.created_at)), 'do MMMM Y')}
             </p>
-            <p>{result.content}</p>
+            <p className='text-start text-sm sm:text-md'>{result.content.slice(0, 200)}</p>
           </div>
         </div>
       ))}
